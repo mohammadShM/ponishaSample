@@ -28,3 +28,5 @@
 <link rel="stylesheet" href="{{asset('/AdminFolder/dist/css/custom-style.css')}}">
 <!-- css for me -->
 <link rel="stylesheet" href="{{asset('/AdminFolder/css/custom.css')}}">
+<script src="{{asset('js/app.js')}}"></script>
+@livewireStyles

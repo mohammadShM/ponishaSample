@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
             $table->string('lang_notification')->nullable()->default('fa');
             $table->string('lang_project')->nullable()->default('fa');
             $table->timestamp('email_verified_at')->nullable();
+            $table->integer('status')->default(1);
             $table->string('password');
             $table->string('cover')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
