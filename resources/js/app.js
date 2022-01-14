@@ -6,7 +6,7 @@ window.Alpine = Alpine;
 
 Alpine.start();
 
-// custom for me ============================================================================
+// custom for me toast ============================================================================
 const Swal = require('sweetalert2');
 // noinspection JSUnresolvedFunction
 const Toast = Swal.mixin({

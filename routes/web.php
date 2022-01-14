@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
+Route::get('/', static function () {
     auth()->loginUsingId(1);
     return view('welcome');
 });

@@ -11,9 +11,10 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">@yield('title')</h3>
-
-                                <div class="card-tools">
+                                <h3 class="card-title d-inline-block">@yield('title')</h3>
+                                <div class="card-tools d-flex">
+                                    <a href="{{route('user.add')}}" type="button"
+                                       class="btn btn-primary btn-sm d-inline-block ml-2">افزودن کاربران</a>
                                     <form action="" onclick="event.preventDefault()">
                                         <div class="input-group input-group-sm" style="width: 150px;">
                                             <label for="table_search"></label>
@@ -75,11 +76,11 @@
                                                 <td>
                                                     @if($user->email_verified_at)
                                                         <span style="cursor: pointer;"
-                                                            class="badge badge-success">تایید شده</span>
+                                                              class="badge badge-success">تایید شده</span>
                                                     @else
                                                         <span wire:click="updateEmailToDisable({{$user->id}})"
-                                                            style="cursor: pointer;"
-                                                            class="badge badge-danger">تایید نشده</span>
+                                                              style="cursor: pointer;"
+                                                              class="badge badge-danger">تایید نشده</span>
                                                     @endif
                                                 </td>
                                                 <td>
@@ -101,9 +102,8 @@
                                                                 class="btn btn-danger btn-sm ml-2">
                                                             حذف
                                                         </button>
-                                                        <button type="button" class="btn btn-success btn-sm">
-                                                            ویرایش
-                                                        </button>
+                                                        <a href="{{route('user.edit',$user)}}" type="button"
+                                                           class="btn btn-success btn-sm">ویرایش</a>
                                                     </div>
                                                 </td>
                                             </tr>

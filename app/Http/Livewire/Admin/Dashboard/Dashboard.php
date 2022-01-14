@@ -1,4 +1,4 @@
-<?php
+<?php /** @noinspection PhpMissingReturnTypeInspection */
 
 namespace App\Http\Livewire\Admin\Dashboard;
 

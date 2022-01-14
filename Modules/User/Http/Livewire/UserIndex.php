@@ -1,11 +1,11 @@
-<?php /** @noinspection PhpMissingFieldTypeInspection */
+<?php /** @noinspection ReturnTypeCanBeDeclaredInspection */
+/** @noinspection PhpMissingReturnTypeInspection */
+
+/** @noinspection PhpMissingFieldTypeInspection */
 
 namespace Modules\User\Http\Livewire;
 
 use App\Models\User;
-use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Contracts\View\Factory;
-use Illuminate\Contracts\View\View;
 use Illuminate\Support\Carbon;
 use Livewire\Component;
 use Livewire\WithPagination;
@@ -75,7 +75,7 @@ class UserIndex extends Component
         $this->emit('toast', 'success', 'کاربر مورد نظر با موفقیت حذف شد');
     }
 
-    public function render(): Factory|View|Application
+    public function render()
     {
         $users = $this->readyToLoad ? User::query()->where('name', 'LIKE', "%$this->search%")
             ->orWhere('last_name', 'LIKE', "%$this->search%")
